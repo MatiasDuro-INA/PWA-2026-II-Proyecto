@@ -1,0 +1,32 @@
+:root {
+  --fondo: #f6efe6;
+  --papel: #fffaf4;
+  --texto: #3b2f2a;
+  --suave: #8a776c;
+  --linea: #e6d9cb;
+  --acento: #c8643b;
+  --acento-oscuro: #a94f2b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
