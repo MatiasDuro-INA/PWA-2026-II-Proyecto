@@ -44,13 +44,32 @@ export const AuthProvider = ({ children }) => {
         }
     }
 
+    const registro = async (nombre, email, password) => {
+
+        const body = {
+            nombre, email, password
+        }
+
+        const response = await fetch("https://6ad158aaaddc5b5cb142f749.mockapi.io/usuarios", {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        })
+        const nuevoUsuario = await response.json()
+
+        setUsuario(nuevoUsuario)
+        return nuevoUsuario
+    }
+
+
     const logout = () => {
         setUsuario(null)
     }
 
 
+
     return (
-        <AuthContext.Provider value={{ login, usuario, logout }}>
+        <AuthContext.Provider value={{ login, usuario, logout, registro }}>
             {children}
         </AuthContext.Provider>
     )
