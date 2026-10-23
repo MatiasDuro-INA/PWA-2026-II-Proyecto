@@ -1,0 +1,91 @@
+
+.crear-producto {
+  display: grid;
+  place-items: center;
+  padding: 40px 16px 64px;
+}
+
+.crear-producto-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--papel);
+  padding: 36px 32px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px -20px rgba(120, 70, 40, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.crear-producto-card h1 {
+  font-size: 28px;
+}
+
+.crear-producto-card label,
+.crear-producto-card fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.crear-producto-card fieldset {
+  border: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.crear-producto-card legend {
+  margin-bottom: 6px;
+}
+
+.crear-producto-card input,
+.crear-producto-card textarea {
+  font: inherit;
+  font-weight: 400;
+  padding: 12px 14px;
+  border: 1.5px solid var(--linea);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--texto);
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.crear-producto-card input:focus,
+.crear-producto-card textarea:focus {
+  border-color: var(--acento);
+}
+
+.crear-producto-error {
+  color: var(--acento-oscuro);
+  font-size: 14px;
+}
+
+.crear-producto-ok {
+  color: #3f7d4e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.crear-producto-card button {
+  margin-top: 6px;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: var(--acento);
+  color: #fff;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.crear-producto-card button:hover:not(:disabled) {
+  background: var(--acento-oscuro);
+}
+
+.crear-producto-card button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

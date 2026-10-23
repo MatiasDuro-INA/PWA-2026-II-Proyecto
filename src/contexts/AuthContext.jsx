@@ -27,7 +27,8 @@ export const AuthProvider = ({ children }) => {
         return data
     }
 
-
+// en el contexto generamos funciones, estados, datos, 
+// que puedan ser usados en cualquier parte de mi aplicacion
 
     const login = async (email, password) => {
 
@@ -67,9 +68,11 @@ export const AuthProvider = ({ children }) => {
     }
 
 
+    const esAdmin = usuario?.admin === true || usuario?.admin === "true"
+
 
     return (
-        <AuthContext.Provider value={{ login, usuario, logout, registro }}>
+        <AuthContext.Provider value={{ login, usuario, logout, registro, esAdmin }}>
             {children}
         </AuthContext.Provider>
     )
